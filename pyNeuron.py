@@ -127,11 +127,10 @@ class Neuron:
 		what does it mean to consume or process data?
 		Presently, we just eval the code. 
 		"""
-		# eval(data)
 
-		
+		print('Running task:', task.__name__, "on Neuron:", self)
 		result = task(data)
-		#print("Result", result)
+		print("Result", result)
 		self.setLocalData(result)
 		self.propogate(result)
 		# for neuron in self.connections:
